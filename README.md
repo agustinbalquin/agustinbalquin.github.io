@@ -1,7 +1,8 @@
-#Flatfy - Theme | New Version!
+Personal Website
+===========================
 
-##Responsive Mobile & Flat Design 
-Own Carousel & Bootstrap Framework CSS 
-Font Icon Svg & Animate
+Currently in development...
 
-Theme made by [Andrea Galanti](http://www.andreagalanti.it/flatfy.php)
+Implementing various templates just to test the waters.
+Credit and sources will be cited if any implementation of open source code is used in final launch
+
