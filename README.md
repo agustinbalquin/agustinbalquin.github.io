@@ -7,3 +7,4 @@ Implementing various templates just to test the waters.
 Credit and sources will be cited if any implementation of open source code is used in final launch
 
 Learning Boostrap
+Most likely will continue working on this after exams
