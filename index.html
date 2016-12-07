@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,3 +25,31 @@
     <script src="/bundle.js"></script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>website</title>
+    <link href='/main.css' rel='stylesheet' type='text/css'/>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/octicons/build/font/octicons.css">
+  </head>
+  <body>
+    <div>
+    </div>
+    <div class="container" id="root"></div>
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script src="/bundle.js"></script>
+  </body>
+</html>
+>>>>>>> 5c9de7879ece797d0e6a0ca2125a4b076135e5ca
