@@ -18,7 +18,11 @@ export class Layout extends Component {
               : "Agustin Balquin | Software Engineer"
             }
           </h1>
+          { pageStore.currentPage ? <h8 className="page-title"> <a href="AgustinBalquin-Resume.pdf">Resume</a></h8> :<h8 className="page-title"> <a href="AgustinBalquin-Resume.pdf">Resume</a></h8>}
+          { pageStore.currentPage ? <h6 className="page-title"> <a href="https://github.com/agustinbalquin/">GitHub</a></h6> : <h6 className="page-title"> <a href="https://github.com/agustinbalquin/">GitHub</a></h6>}
+          { pageStore.currentPage ? <h7 className="page-title"> <a href="https://linkedin.com/in/agustinbalquin/">LinkedIn</a></h7> :<h7 className="page-title"> <a href="https://linkedin.com/in/agustinbalquin/">LinkedIn</a></h7>}
           { pageStore.currentPage ? <h2 className="page-title">{pageStore.currentPage.title}</h2> : "" }
+          
         </div>
         <div className="allChildContent"> { this.props.children } </div>
       </div>
@@ -38,7 +42,7 @@ export class Page extends Component {
             <What content={pageStore.currentPage.what} />
             <How content={pageStore.currentPage.how} />
             </div>
-          : <h5 className="error">RECIPE NOT FOUND</h5>
+          : <h5 className="error">PAGE NOT FOUND</h5>
         }
         </div>
         );
@@ -59,6 +63,8 @@ export const IngredientSection = (props) => {
   );
 }
 
+
+//whatblock 
 export const What = (props) => {
   return (
     <div className="whatBlock">
@@ -72,6 +78,7 @@ export const What = (props) => {
   );
 }
 
+//how
 export const How = (props) => {
   return (
     <div className="howBlock">
@@ -81,6 +88,8 @@ export const How = (props) => {
   );
 }
 
+
+//PageList
 @observer
 export class PageList extends Component {
   componentDidMount() { pageStore.currentPageSlug = null; }
@@ -101,8 +110,10 @@ export class PageList extends Component {
   }
 }
 
+//leftover from 
 @observer
 export class Ingredient extends Component {
+  //ingredients used
   @observable titleData;
   @observable amountData;
   @observable completed;
@@ -114,6 +125,7 @@ export class Ingredient extends Component {
     this.amountData = props.amount
     this.completed = false;
   }
+  //render method
   render() { return <div className={this.ingredientClasses}>{this.amount}{this.title}</div> }
   @computed get amountIsBlank() { return this.amountData == "" }
   @computed get title() {
@@ -128,18 +140,19 @@ export class Ingredient extends Component {
   @action toggleCompleted = () => {
     this.completed = ! this.completed
   }
+  //units of measurement
   expand(measure) {
     switch(measure) {
       case "c":
-      return "cup";
+      return "car";
       case "t":
-      return "teaspoon"
+      return "tuck"
       case "T":
-      return "tablespoon"
+      return "tub"
       case "ml":
-      return "milliliter"
+      return "miru"
       case "g":
-      return "gram"
+      return "grammy"
       default:
       this.didExpand = false;
       return measure;

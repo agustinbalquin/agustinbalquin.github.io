@@ -1,0 +1,13 @@
+---
+title: StockPrediction
+what:
+  MachineLearning:
+    University of California, Riverside: where
+    Stock Prediction Software: project
+    TensorFlow: framework
+  information:
+    true: Neural Networks
+    tf.get_rich_or_die_trying(): yes
+    false: sleep
+how:
+  - I created this.
