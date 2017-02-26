@@ -1,14 +1,9 @@
 Personal Website
 ===========================
 
-Currently in development...
 
-Website at agustinbalquin@gmail.com
+Website at agustinbalquin.com
 
-Pages already written, Just need to add
+Built in React.JS
 
-Work in progress
-
-Getting Better
-
-
+Threw out old repository code
